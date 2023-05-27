@@ -24,10 +24,8 @@ body {
   height: 35.5px;
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s ease-in;
 }
 
 .cell:hover {
   background-color: white;
-  transition: none;
 }
