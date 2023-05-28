@@ -8,6 +8,7 @@ for (i = 0; i < 256; i++) {
 
 let grid = document.querySelectorAll(".cell");
 grid.forEach((square) => {
-  if (square.getPropertyValue("background-color" === "white"))
-    square.setAttribute("background-color", "white");
+  square.addEventListener("mouseover", () => {
+    square.style.backgroundColor = "white";
+  });
 });

@@ -25,7 +25,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.cell:hover {
-  background-color: white;
-}
