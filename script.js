@@ -16,9 +16,11 @@ grid.forEach((square) => {
 let button = document.querySelector("button");
 button.addEventListener("click", () => {
   let answer = prompt("Enter dimensions of grid (1-100)");
-  if (answer < 1 || answer > 100) {
-    let answer = prompt("Please enter a valid number 1-100");
-    if (answer < 1 || answer > 100) {
+  answer = parseInt(answer);
+  if (answer < 1 || answer > 100 || isNaN(answer)) {
+    answer = prompt("Please enter a valid number 1-100");
+    answer = parseInt(answer);
+    if (answer < 1 || answer > 100 || isNaN(answer)) {
       alert("Learn how to read the instructions :)");
     }
   }
