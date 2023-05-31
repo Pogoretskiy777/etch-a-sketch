@@ -25,19 +25,20 @@ button.addEventListener("click", () => {
     }
   }
   if (answer > 0 && answer < 101) {
-    newGrid(grid, container, answer, cell);
+    newGrid(container, answer, cell);
   }
 });
 
 /**
  * This program removes the current grid and adds a new grid according to the user's answer.
  *
- * @param {NodeList} grid
- * @param {HTMLElement} container
- * @param {number} dimension
- * @param {HTMLElement} cell
+ * @param {NodeList} grid - The grid, or "drawing board"
+ * @param {HTMLElement} container - The container that consists of the grid
+ * @param {number} dimension - The number of squares per side of the grid
+ * @param {HTMLElement} cell - A singular square of the grid
  */
-function newGrid(grid, container, dimension, cell) {
+function newGrid(container, dimension, cell) {
+  let grid = document.querySelectorAll(".cell");
   grid.forEach((square) => {
     square.style.display = "none";
   });
