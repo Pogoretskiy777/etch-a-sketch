@@ -2,10 +2,12 @@ let container = document.querySelector(".container");
 let cell = document.createElement("div");
 cell.classList.add("cell");
 
+// Create initial grid 16x16
 for (i = 0; i < 256; i++) {
   container.appendChild(cell.cloneNode(true));
 }
 
+// Leave a trail of white squares after the mouse hovers
 let grid = document.querySelectorAll(".cell");
 grid.forEach((square) => {
   square.addEventListener("mouseover", () => {
@@ -13,6 +15,7 @@ grid.forEach((square) => {
   });
 });
 
+// Create button to remove current grid and add a custom grid 1x1 - 100x100
 let button = document.querySelector("button");
 button.addEventListener("click", () => {
   let answer = prompt("Enter dimensions of grid (1-100)");
